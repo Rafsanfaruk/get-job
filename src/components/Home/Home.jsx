@@ -1,12 +1,15 @@
 import React from 'react';
- import image from '../../assets/All Images/copy.png';
-import Cover from '../Cover/Cover';
+ import Cover from '../Cover/Cover';
+import JobCategory from '../JobCategory/JobCategory';
+import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 
 const Home = () => {
     return (
     <div>
         <Cover />
+        <JobCategory />
+        <FeaturedJobs />
     </div>
     );
 };

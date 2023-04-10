@@ -7,14 +7,17 @@ import Home from './components/Home/Home'
 import Statistics from './components/Statistics/Statistics'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs'
 import Blog from './components/Blog/Blog'
+import Error from './components/Error/Error'
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // errorElement: <ErrorPage />,
+    errorElement: <Error />,
     
     children: [
-      {path: '/', element:<Home /> },
+      {path: '/', element:<Home />,
+      loader:()=>fetch('/public/jobCatg.json')
+     },
       {path: '/statistics', element:<Statistics /> },
       {path: '/applied-jobs', element:<AppliedJobs /> },
       {path: '/blog', element:<Blog /> },

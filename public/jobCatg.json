@@ -1,0 +1,38 @@
+[
+    {
+      "id": "6433aff8fd0c7b4e3a199119",
+      "CategoryLogo": "https://i.ibb.co/KVhQJhN/accounts-1.png",
+      "CategoryName": "Account & Finance",
+      "JobsAvailable": "300 Jobs Available"
+    },
+    {
+      "id": "6433aff8b480200b9d855db3",
+      "CategoryLogo": "https://i.ibb.co/25SKmRb/business-1.png",
+      "CategoryName": "Creative Design",
+      "JobsAvailable": "100+ Jobs Available"
+    },
+    {
+      "id": "6433aff8e00f8a3c336812c0",
+      "CategoryLogo": "https://i.ibb.co/DMtN7C6/chip-1.png",
+      "CategoryName": "Marketing & Sales",
+      "JobsAvailable": "150 Jobs Available"
+    },
+    {
+      "id": "6433aff8b5284cc68f8d6c2b",
+      "CategoryLogo": "https://i.ibb.co/rdzfRvX/social-media-1.png",
+      "CategoryName": "Engineering Job",
+      "JobsAvailable": "224 Jobs Available"
+    },
+    {
+      "id": "6433aff85878c9b662d0dff6",
+      "CategoryLogo": "",
+      "CategoryName": "Engineering Job",
+      "JobsAvailable": "250+ Jobs Available"
+    },
+    {
+      "id": "6433aff80c6653cf0b6e97db",
+      "CategoryLogo":"",
+      "CategoryName": "Account & Finance",
+      "JobsAvailable": "300 Jobs Available"
+    }
+  ]
