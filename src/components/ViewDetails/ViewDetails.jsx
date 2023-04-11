@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useNavigation, useParams } from "react-router-dom";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const ViewDetails = () => {
+
+    const navigation = useNavigation()
+//   console.log(navigation.state)
+  if (navigation.state === 'loading') {
+    return <LoadingSpinner />
+  }
+
   const { id } = useParams();
 
   const [details, setDetails] = useState([]);

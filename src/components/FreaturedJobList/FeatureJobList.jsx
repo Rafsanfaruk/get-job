@@ -1,7 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const FeatureJobList = ({feature}) => {
+  
+    const navigation = useNavigation()
+    
+    if (navigation.state === 'loading') {
+      return <LoadingSpinner />
+    }
+
     // console.log(feature);
     return (
         
