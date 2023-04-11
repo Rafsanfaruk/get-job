@@ -4,14 +4,18 @@ import FeatureJobList from '../FreaturedJobList/FeatureJobList';
 const FeaturedJobs = () => {
 
     const [features,setFeature] =useState([])
+    const [showAll, setShowAll] = useState(false)
 
     useEffect(()=>{
         fetch("/public/data.json")
         .then(res => res.json())
-        .then(data =>setFeature(data.slice(0,4)))
+        .then(data =>setFeature(data))
 
     },[])
-    //  console.log(features);
+
+    const handleSeeMore = () => {
+        setShowAll(true)
+    }
 
     return (
      
@@ -22,17 +26,20 @@ const FeaturedJobs = () => {
              </div>
              <div className='grid gap-6 lg:grid-cols-2 sm:grid-cols-1'>
                 {
-                    features.map((feature) =><FeatureJobList
+                    features.slice(0, showAll ? features.length : 4).map((feature) =><FeatureJobList
                     feature={feature}
                     key={feature.id}
                     ></FeatureJobList>)
                 }
              </div>
-             <div className=' content-center  ms-96 '>
-             <button className='btn'>See More</button>
-             </div>
+             {!showAll && features.length > 4 && (
+                <div className='content-center  ms-96 '>
+                    <button className='btn' onClick={handleSeeMore}>See More</button>
+                </div>
+             )}
         </div>
     );
 };
 
 export default FeaturedJobs;
+

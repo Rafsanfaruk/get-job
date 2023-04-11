@@ -31,7 +31,7 @@ const Statistics = () => {
     return (
         <div className='my-container'>
             <ComposedChart
-              width={500}
+              width={600}
               height={400}
               data ={assignmentMarks}
             
