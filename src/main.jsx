@@ -9,6 +9,7 @@ import AppliedJobs from './components/AppliedJobs/AppliedJobs'
 import Blog from './components/Blog/Blog'
 import Error from './components/Error/Error'
 import ViewDetails from './components/ViewDetails/ViewDetails'
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       {path: '/statistics', element:<Statistics /> },
       {path: '/applied-jobs', element:<AppliedJobs /> },
       {path: '/blog', element:<Blog /> },
+      {path: 'loader',element: <LoadingSpinner />,},
      
     ],
   },

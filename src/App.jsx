@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header';
 import { BeakerIcon } from '@heroicons/react/24/solid'
+import Footer from './components/FooterPart/Footer';
 
 const App = () => {
   return (
@@ -9,8 +10,12 @@ const App = () => {
     
      {/* header */}
      <Header />
-      <Outlet />
+     {/* main content */}
+     <div className='min-h-[calc(100vh-136px)]'>
+        <Outlet />
+      </div>
       {/* footer */}
+      <Footer />
 
     </div>
   );
