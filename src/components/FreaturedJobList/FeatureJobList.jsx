@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeatureJobList = ({feature}) => {
-    console.log(feature);
+    // console.log(feature);
     return (
         
         <div className='my-container '>
@@ -23,9 +24,12 @@ const FeatureJobList = ({feature}) => {
                     <p>{feature.salary}</p>
                 </div>
             </div>
-            <button className='btn mt-4'> View details</button>
-
+            
+           <Link to={`../feature/${feature.id}`} className='btn mt-4'>View details</Link>
+        
             </div>
+            
+            
         </div>
     );
 };

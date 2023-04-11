@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn{
-    @apply inline-flex items-center h-12 px-6 mb-3 font-medium text-white transition duration-200 rounded-lg shadow-md  md:mb-0 bg-purple-400 hover:bg-purple-600
+    @apply inline-flex items-center h-12 px-6 mb-3 font-medium text-white transition duration-200 rounded-lg shadow-md  md:mb-0 bg-gradient-to-r from-violet-500 to-fuchsia-500
   }
 
   .active{

@@ -28,6 +28,9 @@ const FeaturedJobs = () => {
                     ></FeatureJobList>)
                 }
              </div>
+             <div className=' content-center  ms-96 '>
+             <button className='btn'>See More</button>
+             </div>
         </div>
     );
 };

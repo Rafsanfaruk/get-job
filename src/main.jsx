@@ -8,6 +8,7 @@ import Statistics from './components/Statistics/Statistics'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs'
 import Blog from './components/Blog/Blog'
 import Error from './components/Error/Error'
+import ViewDetails from './components/ViewDetails/ViewDetails'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -18,6 +19,12 @@ const router = createBrowserRouter([
       {path: '/', element:<Home />,
       loader:()=>fetch('/public/jobCatg.json')
      },
+     {
+      path: 'feature/:id',
+      element: <ViewDetails />,
+      // loader:({params})=>fetch(`/data.json/${params.id}`),
+      
+    },
       {path: '/statistics', element:<Statistics /> },
       {path: '/applied-jobs', element:<AppliedJobs /> },
       {path: '/blog', element:<Blog /> },
