@@ -3,7 +3,7 @@ import FeatureJobList from '../FreaturedJobList/FeatureJobList';
 
 const FeaturedJobs = () => {
 
-    const [features,setFeature] =useState([])
+    const [features,setFeature] = useState([])
     const [showAll, setShowAll] = useState(false)
 
     useEffect(()=>{
@@ -17,6 +17,8 @@ const FeaturedJobs = () => {
         setShowAll(true)
     }
 
+    const featuresToDisplay = showAll ? features : features.slice(0, 4);
+
     return (
      
         <div className='my-container'>
@@ -26,7 +28,7 @@ const FeaturedJobs = () => {
              </div>
              <div className='grid gap-6 lg:grid-cols-2 sm:grid-cols-1'>
                 {
-                    features.slice(0, showAll ? features.length : 4).map((feature) =><FeatureJobList
+                    featuresToDisplay.map((feature) =><FeatureJobList
                     feature={feature}
                     key={feature.id}
                     ></FeatureJobList>)
@@ -42,4 +44,3 @@ const FeaturedJobs = () => {
 };
 
 export default FeaturedJobs;
-

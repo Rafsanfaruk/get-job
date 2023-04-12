@@ -16,6 +16,7 @@ const ViewDetails = () => {
   const [details, setDetails] = useState([]);
   useEffect(() => {
     fetch("/data.json")
+    
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
