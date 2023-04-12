@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       
     },
       {path: '/statistics', element:<Statistics /> },
-      {path: '/applied-jobs', element:<AppliedJobs /> },
+      {path: '/applied-jobs', element:<AppliedJobs /> ,loader:() =>fetch('/data.json')},
       {path: '/blog', element:<Blog /> },
       {path: 'loader',element: <LoadingSpinner />,},
      

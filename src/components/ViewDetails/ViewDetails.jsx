@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigation, useParams } from "react-router-dom";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import { addToDb } from "../../Utilities/fakeDb";
 
 const ViewDetails = () => {
 
@@ -19,6 +20,14 @@ const ViewDetails = () => {
       .then((data) => setDetails(data));
   }, []);
   const jobDetails = details.find((job) => job.id === parseInt(id));
+
+//  apply button
+const handleApply = (id)=>{
+  addToDb(id)
+}
+
+ 
+
 
   return (
     <div className="px-2 py-12 mx-auto ">
@@ -82,7 +91,7 @@ const ViewDetails = () => {
                     <img src={jobDetails.locationLogo} alt="" />
                     <p><span>Address: </span>{jobDetails.location}</p>
                 </div>
-                <button className="btn">Apply Now</button>
+                <button onClick={() =>handleApply(id)} className="btn">Apply Now</button>
 
               </div>
             </div>
